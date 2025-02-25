@@ -2,7 +2,7 @@
 
 RevealLoader is a jailbreak tweak that allows you to load the `RevealServer` binary into iOS applications for UI inspection and debugging purposes using the [Reveal](https://revealapp.com/) app on macOS. This tweak is particularly useful for developers who want to analyze the view hierarchy of iOS apps in real-time.
 
-![](./docs/inspecting-with-reveal.jpeg)
+![](./docs/inspecting-with-reveal.jpg)
 
 ## Prerequisites
 * A [jailbroken iOS device](https://ios.cfw.guide/) (compatible with rootless jailbreaks; confirmed to work on iOS 15 and iOS 18).
@@ -22,11 +22,11 @@ $ cd RevealLoader
 
 RevealLoader is designed to load the `RevealServer` binary into UIKit-based applications. The `RevealServer` binary in this repository is merely a placeholder and is outdated. Always replace it with the version from your installed Reveal app. To do that, launch Reveal and select **Help → Show Reveal Framework in Finder** in the menu bar.
 
-![](./docs/show-reveal-framework-in-finder.png)
+![](./docs/show-reveal-framework-in-finder.jpg)
 
 This will open a Finder window containing the `RevealServer` framework.
 
-![](./docs/reveal-server-binary-location.png)
+![](./docs/reveal-server-binary-location.jpg)
 
 Copy the `RevealServer` binary from the `ios-arm64` directory into the repository:
 
@@ -43,7 +43,7 @@ Upon installation of the tweak, the contents of `layout/` will be mapped to `/va
 > [!WARNING]  
 > If you update the Reveal app on macOS, the `RevealServer` binary may also change. You will need to transfer the updated `RevealServer` binary to your iOS device again; otherwise, Reveal may not be able to connect.
 
-![](./docs/reveal-library-out-of-date.png)
+![](./docs/reveal-library-out-of-date.jpg)
 
 ### 3. Build the tweak with Theos
 
@@ -88,7 +88,7 @@ $ killall SpringBoard
 
 After respringing, your iOS device and any app you open should appear in Reveal, ready to inspect:
 
-![](./docs/reveal-app-connections.png)
+![](./docs/reveal-app-connections.jpg)
 
 ## Troubleshooting
 
