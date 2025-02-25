@@ -14,7 +14,7 @@ RevealLoader is a jailbreak tweak that allows you to load the `RevealServer` bin
 ### 1. Clone this Repository
 
 ```console
-$ git clone https://github.com/pookjw/RevealLoader.git
+$ git clone https://github.com/imkh/RevealLoader.git
 $ cd RevealLoader
 ```
 
@@ -58,20 +58,16 @@ This will produce a `.deb` package inside a new `packages/` directory.
 Transfer the resulting `.deb` package to your jailbroken iOS device using SSH and install it.
 
 ```
-$ scp packages/com.pookjw.revealloader_0.0.1-1+debug_iphoneos-arm64.deb mobile@<device_ip>:/var/jb/var/mobile
+$ scp packages/io.imkh.revealloader_0.0.1-1+debug_iphoneos-arm64.deb mobile@<device_ip>:/var/jb/var/mobile
 $ ssh mobile@<device_ip>
-$ sudo dpkg -i com.pookjw.revealloader_0.0.1-1+debug_iphoneos-arm64.deb
+$ sudo dpkg -i io.imkh.revealloader_0.0.1-1+debug_iphoneos-arm64.deb
 ```
 
 Verify that the tweak was installed:
 
 ```console
-$ sudo dpkg -l
-||/ Name                                                     Version                     Architecture   Description
-+++-========================================================-===========================-==============-==================================================================>
-[...]
-ii  com.pookjw.revealloader                                  0.0.1-1+debug               iphoneos-arm64 An awesome MobileSubstrate tweak!
-[...]
+$ sudo dpkg -l | grep "io.imkh.revealloader"
+ii  io.imkh.revealloader                                  0.0.1-1+debug               iphoneos-arm64 An awesome MobileSubstrate tweak!
 ```
 
 Verify that the `RevealServer` binary is in place:
@@ -97,7 +93,7 @@ After respringing, your iOS device and any app you open should appear in Reveal,
 To uninstall RevealLoader:
 
 ```console
-$ sudo dpkg -r com.pookjw.revealloader
+$ sudo dpkg -r io.imkh.revealloader
 ```
 
 Then respring your device:
@@ -114,7 +110,7 @@ If Reveal does not detect your device or app, check for error messages in the sy
 2. Select your iOS device in the sidebar.
 3. Click `Start Streaming`.
 4. Open the app you want to inspect on your iOS device.
-5. Filter for messages containing: `Failed to load RevealServer - dlopen error: <error message>`.
+5. Filter for messages containing: `[RevealLoader]`.
 
 ### General checks
 

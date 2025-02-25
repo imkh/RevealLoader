@@ -1,8 +1,8 @@
-Package: com.pookjw.revealloader
+Package: io.imkh.revealloader
 Name: RevealLoader
 Version: 0.0.1
 Architecture: iphoneos-arm64
-Description: An awesome MobileSubstrate tweak!
+Description: A Reveal Loader tweak
 Maintainer: Jinwoo Kim
 Author: Jinwoo Kim
 Section: Tweaks
